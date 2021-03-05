@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WhatToDo.DataAccess.Models;
+using System.Linq;
 
 namespace WhatToDo.Website
 {
@@ -27,6 +29,7 @@ namespace WhatToDo.Website
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DB"));
             });
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -74,6 +77,13 @@ namespace WhatToDo.Website
                     spa.UseProxyToSpaDevelopmentServer("http://localhost:4200");
                 }
             });
+
+            //Seed data if dev
+            if (env.IsDevelopment())
+            {
+                DataSeeder ds = new DataSeeder(app.ApplicationServices);
+                ds.SeedData("data.json");
+            }
         }
     }
 }

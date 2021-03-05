@@ -1,0 +1,35 @@
+﻿[
+  {
+    "Name": "Akcent Zoo",
+    "Description": "desc",
+    "Adress": {
+      "City": "Białystok",
+      "Street": "ulica",
+      "Number": "nr"
+    },
+    "OpeningHours": [
+      {
+        "DayOfTheWeek": 0,
+        "Openinghour": "data",
+        "ClosingHour": "data"
+      }
+    ],
+    "Image": [
+      {
+        "Description": "desc",
+        "Source": "link"
+      }
+    ],
+    "Urls": [
+      {
+        "UrlAdress": "url",
+        "Description": "desc"
+      }
+    ],
+    "Categories": [
+      {
+        "Name": "kat"
+      }
+    ]
+  }
+]
