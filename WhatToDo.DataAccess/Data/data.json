@@ -1,34 +1,34 @@
 ﻿[
   {
-    "Name": "Akcent Zoo",
-    "Description": "desc",
+    "Name": "Akcent ZOO",
+    "Description": "Akcent ZOO to białostocki ogród zoologiczny. Mieści się on w Parku Konstytucji 3 Maja. ZOO powstał w latach 60-tych XX w. pełniąc funkcję tymczasowego miejsca służącego do przechowywania zwierząt.",
     "Adress": {
       "City": "Białystok",
-      "Street": "ulica",
-      "Number": "nr"
+      "Street": "Podleśna",
+      "Number": "4"
     },
     "OpeningHours": [
       {
         "DayOfTheWeek": 0,
-        "Openinghour": "data",
-        "ClosingHour": "data"
+        "Openinghour": "",
+        "ClosingHour": ""
       }
     ],
     "Image": [
       {
-        "Description": "desc",
-        "Source": "link"
+        "Description": "Żubr",
+        "Source": "https://d-art.ppstatic.pl/kadry/k/r/1/0a/3f/55c60ea0f41fb_o_full.jpg"
       }
     ],
     "Urls": [
       {
-        "UrlAdress": "url",
-        "Description": "desc"
+        "UrlAdress": "https://www.google.com/maps/place/Akcent+ZOO/@53.1207604,23.1636033,17z/data=!3m1!4b1!4m5!3m4!1s0x471ffeaa59c929c5:0x7e9ccacd757e6f40!8m2!3d53.1207572!4d23.165792",
+        "Description": "Google Maps"
       }
     ],
     "Categories": [
       {
-        "Name": "kat"
+        "Name": "Ciekawe Miejsca"
       }
     ]
   }
