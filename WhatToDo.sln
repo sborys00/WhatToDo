@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatToDo.Website", "WhatToDo.Website\WhatToDo.Website.csproj", "{8284B5BB-9B36-4173-9B38-E29A0299DA25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhatToDo.Website", "WhatToDo.Website\WhatToDo.Website.csproj", "{8284B5BB-9B36-4173-9B38-E29A0299DA25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatToDo.DataAccess", "WhatToDo.DataAccess\WhatToDo.DataAccess.csproj", "{D1637AD6-1817-4516-B94A-B79F96929827}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8284B5BB-9B36-4173-9B38-E29A0299DA25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8284B5BB-9B36-4173-9B38-E29A0299DA25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8284B5BB-9B36-4173-9B38-E29A0299DA25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1637AD6-1817-4516-B94A-B79F96929827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1637AD6-1817-4516-B94A-B79F96929827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1637AD6-1817-4516-B94A-B79F96929827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1637AD6-1817-4516-B94A-B79F96929827}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
