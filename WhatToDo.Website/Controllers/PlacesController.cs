@@ -24,7 +24,12 @@ namespace WhatToDo.Website.Controllers
         [HttpGet]
         public async Task<IEnumerable<Place>> GetPlacesAsync(int limit = 1)
         {
-            return await _db.Places.Take(limit).ToArrayAsync();
+            return await _db.Places.Take(limit).Include(p => p.Adress)
+                .Include(p => p.OpeningHoursList)
+                .Include(p => p.Images)
+                .Include(p => p.Urls)
+                .Include(p => p.Categories)
+                .ToArrayAsync();
         }
     }
 }
