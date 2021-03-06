@@ -1,5 +1,6 @@
 <app-place-card
-  *ngFor="let place of places"
   [place]="place"
   >
 </app-place-card>
+<button (click)="prevPlace()">Poprzedni</button>
+<button (click)="nextPlace()">Następny</button>
