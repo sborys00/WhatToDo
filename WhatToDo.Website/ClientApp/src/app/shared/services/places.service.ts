@@ -7,11 +7,12 @@ import { Place } from "../models/place.model";
   providedIn: 'root',
 })
 export class PlacesService {
-  apiUrl: string = "https://localhost:44300/Places"
+  apiUrl: string = "api/Places"
   limit: number = 5;
+  random: boolean = true;
 
   constructor(private http: HttpClient) { }
   getPlaces(): Observable<Place[]> {
-    return this.http.get<Place[]>(`${this.apiUrl}?limit=${this.limit}`);
+    return this.http.get<Place[]>(`${this.apiUrl}?limit=${this.limit}&${this.random}`);
   }
 }
