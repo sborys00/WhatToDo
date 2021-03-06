@@ -12,7 +12,7 @@ export class PlacesService {
   random: boolean = true;
 
   constructor(private http: HttpClient) { }
-  getPlaces(): Observable<Place[]> {
+  getPlaces(limit: number = this.limit, random: boolean = this.random): Observable<Place[]> {
     return this.http.get<Place[]>(`${this.apiUrl}?limit=${this.limit}&${this.random}`);
   }
 }
