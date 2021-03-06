@@ -22,6 +22,9 @@ namespace WhatToDo.DataAccess.Models
         [Required]
         public Address Address { get; set; }
 
+        [Required]
+        public Image Thumbnail { get; set; }
+
         public List<OpeningHours> OpeningHoursList { get; set; }
 
         public List<Image> Images { get; set; }

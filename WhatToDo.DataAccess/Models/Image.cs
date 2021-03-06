@@ -10,7 +10,7 @@ namespace WhatToDo.DataAccess.Models
         [MaxLength(200)]
         public string Description { get; set; }
 
-        [MaxLength(200)]
+        [MaxLength(500)]
         public string Source { get; set; }
     }
 }

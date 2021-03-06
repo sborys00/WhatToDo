@@ -13,9 +13,11 @@ namespace WhatToDo.DataAccess.Models
         public int DayOfTheWeek { get; set; }
 
         [Required]
+        [DataType(DataType.Time)]
         public DateTime OpeningHour { get; set; }
 
         [Required]
+        [DataType(DataType.Time)]
         public DateTime ClosingHour { get; set; }
     }
 }
