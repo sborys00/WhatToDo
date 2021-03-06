@@ -9,11 +9,14 @@ import { PlacesService } from '../shared/services/places.service';
 })
 export class ContentComponent implements OnInit {
 
+  private _ps: PlacesService;
+
   places: Place[] = [];
   place: Place = this.places[0];
   i: number = 0;
   constructor(ps: PlacesService) {
-    ps.getPlaces().subscribe(places => {
+    this._ps = ps;
+    ps.getPlaces().subscribe(places => {      
       this.places = places;
       this.place = this.places[0];
     });
@@ -26,6 +29,13 @@ export class ContentComponent implements OnInit {
     if (this.i < this.places.length - 1) {
       this.i++;
       this.place = this.places[this.i];
+      if (this.i == this.places.length - 1) {
+        this._ps.getPlaces().subscribe(places => {
+          for (var place of places) {
+            this.places.push(place);
+          }
+        });
+      }
     }
   }
   prevPlace(): void {
