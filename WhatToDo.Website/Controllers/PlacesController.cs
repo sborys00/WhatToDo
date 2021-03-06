@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 namespace WhatToDo.Website.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class PlacesController : ControllerBase
     {
         private readonly PlacesContext _db;
@@ -22,15 +22,21 @@ namespace WhatToDo.Website.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Place>> GetPlacesAsync(int limit = 1)
+        public async Task<IEnumerable<Place>> GetPlacesAsync(int limit = 1, bool random = false)
         {
-            return await _db.Places.Take(limit).Include(p => p.Address)
+            var query = _db.Places.Take(limit).Include(p => p.Address)
                 .Include(p => p.OpeningHoursList)
                 .Include(p => p.Images)
                 .Include(p => p.Urls)
                 .Include(p => p.Categories)
-                .Include(p => p.Thumbnail)
-                .ToArrayAsync();
+                .Include(p => p.Thumbnail);
+
+            if(random)
+            {
+                query.OrderBy(p => Guid.NewGuid());
+            }
+
+            return await query.ToArrayAsync();
         }
     }
 }
