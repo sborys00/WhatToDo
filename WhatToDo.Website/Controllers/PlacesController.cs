@@ -29,6 +29,7 @@ namespace WhatToDo.Website.Controllers
                 .Include(p => p.Images)
                 .Include(p => p.Urls)
                 .Include(p => p.Categories)
+                .Include(p => p.Thumbnail)
                 .ToArrayAsync();
         }
     }

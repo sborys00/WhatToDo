@@ -13,6 +13,7 @@ export class PlaceCardComponent implements OnInit {
     placeId: -1,
     name: "Name",
     description: "Description",
+    thumbnail: { imageId: -1, description: "", source: "" },
     address: { addressId: -1, city: "City", street: "Street", number: "Number" }
   };
 

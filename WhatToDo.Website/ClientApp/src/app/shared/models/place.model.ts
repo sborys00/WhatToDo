@@ -7,15 +7,17 @@ export class Place {
   placeId: number;
   name: string;
   description: string;
+  thumbnail: Image;
   address: Address;
   images?: Image[];
   urls?: Url[];
   categories?: Category[];
 
-  constructor(id: number, name: string, description: string, address: Address) {
+  constructor(id: number, name: string, description: string, thumbnail: Image, address: Address) {
     this.placeId = id;
     this.name = name;
     this.description = description;
+    this.thumbnail = thumbnail;
     this.address = address;
   }
 }

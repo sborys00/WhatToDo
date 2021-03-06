@@ -1,20 +1,20 @@
 <div class="card bg-dark text-white h-100">
-  <img class="img-crop card-img" src="{{place.images[0]?.source}}" />
+  <img class="img-crop card-img" src="{{place.thumbnail.source}}" />
   <div class="card-img-overlay">
     <div class="row align-items-start">
       <div class="col-md-auto">
         <h1 class="card-title img-text-bg px-2">{{place.name}}</h1>
       </div>
     </div>
-    <div class="row align-items-start">
+    <div class="row">
       <div class="col">
         <h5 align="left">{{place.address.street}} {{place.address.number}}</h5>
       </div>
-      <div class="col align-items-start">
+      <div class="col">
         <h5 align="right">Godziny</h5>
       </div>
     </div>
-    <div class="row align-items-end">
+    <div class="row">
       <div class="col">
         <p class="card-text img-text-bg">{{place.description}}</p>
       </div>
