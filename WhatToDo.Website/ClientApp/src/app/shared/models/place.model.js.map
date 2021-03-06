@@ -1,1 +1,1 @@
-{"version":3,"file":"place.model.js","sourceRoot":"","sources":["place.model.ts"],"names":[],"mappings":";;;AAKA;IAAA;IAQA,CAAC;IAAD,YAAC;AAAD,CAAC,AARD,IAQC;AARY,sBAAK"}
+{"version":3,"file":"place.model.js","sourceRoot":"","sources":["place.model.ts"],"names":[],"mappings":";;;AAKA;IASE,eAAY,EAAU,EAAE,IAAY,EAAE,WAAmB,EAAE,OAAgB;QACzE,IAAI,CAAC,OAAO,GAAG,EAAE,CAAC;QAClB,IAAI,CAAC,IAAI,GAAG,IAAI,CAAC;QACjB,IAAI,CAAC,WAAW,GAAG,WAAW,CAAC;QAC/B,IAAI,CAAC,OAAO,GAAG,OAAO,CAAC;IACzB,CAAC;IACH,YAAC;AAAD,CAAC,AAfD,IAeC;AAfY,sBAAK"}
