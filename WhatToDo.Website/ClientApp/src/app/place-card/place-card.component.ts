@@ -8,6 +8,14 @@ import { Place } from '../shared/models/place.model';
 })
 export class PlaceCardComponent implements OnInit {
 
+  @Input()
+  place: Place = {
+    placeId: -1,
+    name: "Name",
+    description: "Description",
+    address: { addressId: -1, city: "City", street: "Street", number: "Number" }
+  };
+
   constructor() {
 
   }
