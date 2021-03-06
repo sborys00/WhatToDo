@@ -8,10 +8,10 @@ namespace WhatToDo.DataAccess.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Adresses",
+                name: "Addresses",
                 columns: table => new
                 {
-                    AdressId = table.Column<int>(type: "int", nullable: false)
+                    AddressId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     City = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Street = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
@@ -19,7 +19,7 @@ namespace WhatToDo.DataAccess.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Adresses", x => x.AdressId);
+                    table.PrimaryKey("PK_Addresses", x => x.AddressId);
                 });
 
             migrationBuilder.CreateTable(
@@ -30,16 +30,16 @@ namespace WhatToDo.DataAccess.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(600)", maxLength: 600, nullable: true),
-                    AdressId = table.Column<int>(type: "int", nullable: true)
+                    AddressId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Places", x => x.PlaceId);
                     table.ForeignKey(
-                        name: "FK_Places_Adresses_AdressId",
-                        column: x => x.AdressId,
-                        principalTable: "Adresses",
-                        principalColumn: "AdressId",
+                        name: "FK_Places_Addresses_AddressId",
+                        column: x => x.AddressId,
+                        principalTable: "Addresses",
+                        principalColumn: "AddressId",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -143,9 +143,9 @@ namespace WhatToDo.DataAccess.Migrations
                 column: "PlaceId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Places_AdressId",
+                name: "IX_Places_AddressId",
                 table: "Places",
-                column: "AdressId");
+                column: "AddressId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Urls_PlaceId",
@@ -171,7 +171,7 @@ namespace WhatToDo.DataAccess.Migrations
                 name: "Places");
 
             migrationBuilder.DropTable(
-                name: "Adresses");
+                name: "Addresses");
         }
     }
 }

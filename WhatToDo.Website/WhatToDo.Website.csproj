@@ -30,7 +30,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\shared\models\address.model.ts" />
+    <None Remove="ClientApp\src\app\shared\models\place.model.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\WhatToDo.DataAccess\WhatToDo.DataAccess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\shared\models\address.model.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\models\place.model.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

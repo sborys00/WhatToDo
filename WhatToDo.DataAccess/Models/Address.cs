@@ -2,10 +2,10 @@
 
 namespace WhatToDo.DataAccess.Models
 {
-    public class Adress
+    public class Address
     {
         [Key]
-        public int AdressId { get; set; }
+        public int AddressId { get; set; }
 
         [Required]
         [MaxLength(100)]

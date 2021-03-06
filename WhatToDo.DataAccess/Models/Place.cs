@@ -20,7 +20,7 @@ namespace WhatToDo.DataAccess.Models
         public string Description { get; set; }
 
         [Required]
-        public Adress Adress { get; set; }
+        public Address Address { get; set; }
 
         public List<OpeningHours> OpeningHoursList { get; set; }
 

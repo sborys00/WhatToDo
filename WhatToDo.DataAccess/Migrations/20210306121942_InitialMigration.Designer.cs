@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace WhatToDo.DataAccess.Migrations
 {
     [DbContext(typeof(PlacesContext))]
-    [Migration("20210305124106_InitialMigration")]
+    [Migration("20210306121942_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,9 +21,9 @@ namespace WhatToDo.DataAccess.Migrations
                 .HasAnnotation("ProductVersion", "5.0.3")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("WhatToDo.DataAccess.Models.Adress", b =>
+            modelBuilder.Entity("WhatToDo.DataAccess.Models.Address", b =>
                 {
-                    b.Property<int>("AdressId")
+                    b.Property<int>("AddressId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -41,9 +41,9 @@ namespace WhatToDo.DataAccess.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.HasKey("AdressId");
+                    b.HasKey("AddressId");
 
-                    b.ToTable("Adresses");
+                    b.ToTable("Addresses");
                 });
 
             modelBuilder.Entity("WhatToDo.DataAccess.Models.Category", b =>
@@ -126,7 +126,7 @@ namespace WhatToDo.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("AdressId")
+                    b.Property<int?>("AddressId")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -140,7 +140,7 @@ namespace WhatToDo.DataAccess.Migrations
 
                     b.HasKey("PlaceId");
 
-                    b.HasIndex("AdressId");
+                    b.HasIndex("AddressId");
 
                     b.ToTable("Places");
                 });
@@ -194,11 +194,11 @@ namespace WhatToDo.DataAccess.Migrations
 
             modelBuilder.Entity("WhatToDo.DataAccess.Models.Place", b =>
                 {
-                    b.HasOne("WhatToDo.DataAccess.Models.Adress", "Adress")
+                    b.HasOne("WhatToDo.DataAccess.Models.Address", "Address")
                         .WithMany()
-                        .HasForeignKey("AdressId");
+                        .HasForeignKey("AddressId");
 
-                    b.Navigation("Adress");
+                    b.Navigation("Address");
                 });
 
             modelBuilder.Entity("WhatToDo.DataAccess.Models.Url", b =>
