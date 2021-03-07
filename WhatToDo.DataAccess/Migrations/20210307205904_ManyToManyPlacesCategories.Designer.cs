@@ -4,14 +4,16 @@ using DataAccess.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace WhatToDo.DataAccess.Migrations
 {
     [DbContext(typeof(PlacesContext))]
-    partial class PlacesContextModelSnapshot : ModelSnapshot
+    [Migration("20210307205904_ManyToManyPlacesCategories")]
+    partial class ManyToManyPlacesCategories
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
