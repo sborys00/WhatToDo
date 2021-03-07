@@ -20,7 +20,7 @@ namespace WhatToDo.DataAccess.Models
             _sr = serviceProvider;
         }
 
-        public void SeedData(string path)
+        public void SeedData(string path, string categoriesPath)
         {
             using (var serviceScope = _sr.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
@@ -30,12 +30,36 @@ namespace WhatToDo.DataAccess.Models
                     using (StreamReader sr = new StreamReader(path))
                     {
                         string json = sr.ReadToEnd();
+                        
                         List<Place> places = JsonSerializer.Deserialize<List<Place>>(json);
-                        db.AddRange(places);
-                        db.SaveChanges();
+                        using(StreamReader sr2 = new StreamReader(categoriesPath))
+                        {
+                            string jsonCategories = sr2.ReadToEnd();
+                            List<CategoryPlaces> cp = JsonSerializer.Deserialize<List<CategoryPlaces>>(jsonCategories);
+                            foreach(var cat in cp)
+                            {
+                                Category category = new Category { Name = cat.Name };
+                                foreach(var pla in cat.Places)
+                                {
+                                    Place p = places.Find(p => p.Name == pla);
+                                    if (p.PlaceCategories == null)
+                                        p.PlaceCategories = new List<PlaceCategory>();
+
+                                    p.PlaceCategories.Add(new PlaceCategory { Place = p, Category = category });
+                                }
+                            }
+                            db.AddRange(places);
+                            db.SaveChanges();
+                        }
                     }
                 }
             }
+        }
+
+        private class CategoryPlaces
+        {
+            public string Name { get; set; }
+            public IEnumerable<string> Places { get; set; }
         }
     }
 }

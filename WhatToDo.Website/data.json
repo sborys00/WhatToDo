@@ -29,11 +29,6 @@
         "UrlAdress": "https://goo.gl/maps/sBQpaEYpEeh32axz6",
         "Description": "Google Maps"
       }
-    ],
-    "Categories": [
-      {
-        "Name": "Ciekawe Miejsca"
-      }
     ]
   },
   {
@@ -76,11 +71,6 @@
         "UrlAdress": "https://goo.gl/maps/4uq3mZfzzN6n1R2J8",
         "Description": "Google Maps"
       }
-    ],
-    "Categories": [
-      {
-        "Name": "Ciekawe Miejsca"
-      }
     ]
   },
   {
@@ -112,11 +102,6 @@
       {
         "UrlAdress": "https://goo.gl/maps/Pom6fRd1ZGUFF9jr8",
         "Description": "Google Maps"
-      }
-    ],
-    "Categories": [
-      {
-        "Name": "Jedzenie"
       }
     ]
   }

@@ -31,6 +31,6 @@ namespace WhatToDo.DataAccess.Models
         
         public List<Url> Urls { get; set; }
 
-        public List<Category> Categories { get; set; }
+        public List<PlaceCategory> PlaceCategories { get; set; }
     }
 }

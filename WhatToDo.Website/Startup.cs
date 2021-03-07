@@ -82,7 +82,7 @@ namespace WhatToDo.Website
             if (env.IsDevelopment())
             {
                 DataSeeder ds = new DataSeeder(app.ApplicationServices);
-                ds.SeedData("data.json");
+                ds.SeedData("data.json", "categories.json");
             }
         }
     }

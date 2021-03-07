@@ -28,7 +28,7 @@ namespace WhatToDo.Website.Controllers
                 .Include(p => p.OpeningHoursList)
                 .Include(p => p.Images)
                 .Include(p => p.Urls)
-                .Include(p => p.Categories)
+                //.Include(p => p.Categories)
                 .Include(p => p.Thumbnail);
 
             if(random)
