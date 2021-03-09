@@ -22,21 +22,38 @@ namespace WhatToDo.Website.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Place>> GetPlacesAsync(int limit = 1, bool random = false)
+        public async Task<IEnumerable<Place>> GetPlacesAsync([FromQuery] string[] categories, int limit = 1, bool random = false)
         {
-            var query = _db.Places.Take(limit).Include(p => p.Address)
-                .Include(p => p.OpeningHoursList)
-                .Include(p => p.Images)
-                .Include(p => p.Urls)
-                //.Include(p => p.Categories)
-                .Include(p => p.Thumbnail);
+            IQueryable<Place> query = _db.Places;
 
-            if(random)
+            if(categories.Length > 0)
             {
-                query.OrderBy(p => Guid.NewGuid());
+                query = query.Where(p => p.PlaceCategories.Any(pc => categories.Contains(pc.Category.Name)));
             }
 
-            return await query.ToArrayAsync();
+            query = query.Include(p => p.Address)
+            .Include(p => p.OpeningHoursList)
+            .Include(p => p.Images)
+            .Include(p => p.Urls)
+            .Include(p => p.Thumbnail)
+            .Include(p => p.PlaceCategories).ThenInclude(pc => pc.Category);
+
+            if (random)
+            {
+                query = query.OrderBy(p => Guid.NewGuid());
+            }
+            var res = await query.Take(limit).ToArrayAsync();
+
+            //eliminate cycles inside many-to-many relationship for serialization
+            foreach(var place in res)
+            {
+                foreach(var category in place.PlaceCategories)
+                {
+                    category.Place = null;
+                    category.Category.PlaceCategories = null;
+                }
+            }
+            return res;
         }
     }
 }
