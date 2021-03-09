@@ -78,7 +78,7 @@
     "Description": "Tylko 60 sekund dzieli Cię od poznania smaku tradycyjnej, neapolitańskiej pizzy ze składnikami prosto z włoskiego regionu Kampanii!",
     "Address": {
       "City": "Białystok",
-      "Street": "Nowy Świat 3/lok U4",
+      "Street": "Nowy Świat",
       "Number": "3/lok U4"
     },
     "Thumbnail": {
@@ -101,6 +101,242 @@
     "Urls": [
       {
         "UrlAdress": "https://goo.gl/maps/Pom6fRd1ZGUFF9jr8",
+        "Description": "Google Maps"
+      }
+    ]
+  },
+  {
+    "Name": "Biblioteka Politechniki Białostockiej",
+    "Description": "Jest ona największą naukowo-techniczną biblioteką w północno-wschodniej Polsce. Jej księgozbiór tworzy blisko 400 tysięcy książek, czasopism, norm, katalogów. Literaturę specjalistyczną, ściśle związaną z potrzebami wydziałów, biblioteka gromadziła przez 70 lat.",
+    "Address": {
+      "City": "Białystok",
+      "Street": "Zwierzyniecka",
+      "Number": "16"
+    },
+    "Thumbnail": {
+      "Description": "Politechnika z zewnątrz",
+      "Source": "https://wi.pb.edu.pl/wp-content/uploads/2018/04/podstrona-jednostki.jpg"
+    },
+    "OpeningHoursList": [
+      {
+        "DayOfTheWeek": 0,
+        "OpeningHour": "1970-01-01T08:00:00Z",
+        "ClosingHour": "1970-01-01T15:00:00Z"
+      },
+      {
+        "DayOfTheWeek": 1,
+        "OpeningHour": "1970-01-01T08:00:00Z",
+        "ClosingHour": "1970-01-01T19:45:00Z"
+      },
+      {
+        "DayOfTheWeek": 5,
+        "OpeningHour": "1970-01-01T08:00:00Z",
+        "ClosingHour": "1970-01-01T15:00:00Z"
+      },
+      {
+        "DayOfTheWeek": 6,
+        "OpeningHour": "1970-01-01T00:00:00Z",
+        "ClosingHour": "1970-01-01T00:00:00Z"
+      }
+    ],
+    "Images": [
+      {
+        "Description": "Wnętrze biblioteki",
+        "Source": "https://pb.edu.pl/liceum-ogolnoksztalcace/wp-content/uploads/sites/10/2019/12/DSC_2717.jpg"
+      }
+    ],
+    "Urls": [
+      {
+        "UrlAdress": "https://g.page/biblioteka_pb?share",
+        "Description": "Google Maps"
+      }
+    ]
+  },
+  {
+    "Name": "Atrium Biała",
+    "Description": "Atrium Biała to pierwsze prawdziwe centrum handlowo-usługowe w Białymstoku, oferujące bogaty wybór marek odzieżowych, jak i rozbudowaną ofertę rozrywkową. Atrium Biała, jak żadne inne centrum handlowe, kojarzona jest z niezwykłą atmosferą.",
+    "Address": {
+      "City": "Białystok",
+      "Street": "Czesława Miłosza",
+      "Number": "2"
+    },
+    "Thumbnail": {
+      "Description": "Staw przed Atrium Biała",
+      "Source": "https://bialystokbiega.pl/wp-content/uploads/2016/09/14379807_1245488472160481_7182967812167285156_o.jpg"
+    },
+    "OpeningHoursList": [
+      {
+        "DayOfTheWeek": 0,
+        "OpeningHour": "1970-01-01T09:00:00Z",
+        "ClosingHour": "1970-01-01T21:00:00Z"
+      },
+      {
+        "DayOfTheWeek": 6,
+        "OpeningHour": "1970-01-01T00:00:00Z",
+        "ClosingHour": "1970-01-01T00:00:00Z"
+      }
+    ],
+    "Images": [
+      {
+        "Description": "Święta w Atrium biała",
+        "Source": "https://scontent-waw1-1.xx.fbcdn.net/v/t31.0-8/15418457_1379403068737884_1020143376052915008_o.jpg?_nc_cat=101&ccb=1-3&_nc_sid=730e14&_nc_ohc=pKI71cUIVUQAX-DCGUo&_nc_ht=scontent-waw1-1.xx&oh=adef5f97877132adf5dbb144126501d5&oe=606DF8BB"
+      }
+    ],
+    "Urls": [
+      {
+        "UrlAdress": "https://goo.gl/maps/vUT3ZqBRBGS9DpPp7",
+        "Description": "Google Maps"
+      }
+    ]
+  },
+  {
+    "Name": "Galeria Alfa",
+    "Description": "Alfa Centrum to połączenie tradycji z nowoczesnością. Tutaj, w zabytkowych budynkach fabryki Eugeniusza Beckera, rzeczywistość przeplata się z wielką historią włókiennictwa. Atmosfera tradycji modowej i świetna lokalizacja – w ścisłym centrum Białegostoku – sprzyjają szaleństwu zakupów oraz spotkaniom towarzyskim.",
+    "Address": {
+      "City": "Białystok",
+      "Street": "Świętojańska",
+      "Number": "15"
+    },
+    "Thumbnail": {
+      "Description": "Wejście do Galerii Alfa",
+      "Source": "https://img.investmap.pl/image/23/23/38423_1920x1080.jpg"
+    },
+    "OpeningHoursList": [
+      {
+        "DayOfTheWeek": 0,
+        "OpeningHour": "1970-01-01T09:00:00Z",
+        "ClosingHour": "1970-01-01T21:00:00Z"
+      },
+      {
+        "DayOfTheWeek": 6,
+        "OpeningHour": "1970-01-01T00:00:00Z",
+        "ClosingHour": "1970-01-01T00:00:00Z"
+      }
+    ],
+    "Images": [
+      {
+        "Description": "Wnętrze Galerii Alfa",
+        "Source": "https://cdn.galleries.smcloud.net/t/galleries/gf-fsh7-dcoT-uFpp_galeria-alfa-centrum-bialystok-1280x960.jpg"
+      }
+    ],
+    "Urls": [
+      {
+        "UrlAdress": "https://g.page/alfacentrumbialystok?share",
+        "Description": "Google Maps"
+      }
+    ]
+  },
+  {
+    "Name": "Stadion Miejski",
+    "Description": "Położony w ciekawej okolicy jeden z najbardziej charakterystycznych i niepowtarzalnych obiektów województwa podlaskiego to miejsce nie tylko rozgrywek piłkarskich. To tu spotykają się kibice, ale i trenujący różnorodne dyscypliny sportowe.",
+    "Address": {
+      "City": "Białystok",
+      "Street": "Słoneczna",
+      "Number": "1"
+    },
+    "Thumbnail": {
+      "Description": "Wejście na stadion",
+      "Source": "https://stadion.bialystok.pl/wp-content/uploads/2020/01/IMG_5886.jpg"
+    },
+    "OpeningHoursList": [
+    ],
+    "Images": [
+      {
+        "Description": "Wnętrze stadionu",
+        "Source": "https://stadion.bialystok.pl/wp-content/uploads/2020/01/stadion_13.jpg"
+      }
+    ],
+    "Urls": [
+      {
+        "UrlAdress": "https://g.page/StadionMiejskiwBialymstoku?share",
+        "Description": "Google Maps"
+      }
+    ]
+  },
+  {
+    "Name": "Opera i Filharmonia Podlaska",
+    "Description": "Opera i Filharmonia Podlaska Stanisława Moniuszko łączy w sobie funkcjonalności opery, filharmonii i teatru, przy czym jest także miejscem dla innych produkcji scenicznych, wystaw, konferencji czy też pokazów.",
+    "Address": {
+      "City": "Białystok",
+      "Street": "Odeska",
+      "Number": "1"
+    },
+    "Thumbnail": {
+      "Description": "Budynek z zewnątrz",
+      "Source": "https://www.radio.bialystok.pl/src/554/ce4dbdd4a0b55c6d1c9294f9ae436958"
+    },
+    "OpeningHoursList": [
+      {
+        "DayOfTheWeek": 0,
+        "OpeningHour": "1970-01-01T10:00:00Z",
+        "ClosingHour": "1970-01-01T18:00:00Z"
+      },
+      {
+        "DayOfTheWeek": 5,
+        "OpeningHour": "1970-01-01T11:00:00Z",
+        "ClosingHour": "1970-01-01T19:00:00Z"
+      },
+      {
+        "DayOfTheWeek": 6,
+        "OpeningHour": "1970-01-01T11:00:00Z",
+        "ClosingHour": "1970-01-01T18:00:00Z"
+      }
+    ],
+    "Images": [
+      {
+        "Description": "Budynek Opery z lotu ptaka",
+        "Source": "https://i.pinimg.com/originals/e4/1d/f8/e41df84c564a54dbe72fa9a851de51e1.jpg"
+      },
+      {
+        "Description": "Wnętrze budynku",
+        "Source": "https://www.oifp.eu/wp-content/uploads/2018/08/messa-da-requiem-verdi-koncert-04.04.14.jpg"
+      }
+    ],
+    "Urls": [
+      {
+        "UrlAdress": "https://goo.gl/maps/YNcfrHUC3ZaM8vT59",
+        "Description": "Google Maps"
+      }
+    ]
+  },
+  {
+    "Name": "StrEAT FOOD Młynowa",
+    "Description": "Najbardziej klimatyczny skwer w mieście! Chillout, jedzenie i coś do picia :)",
+    "Address": {
+      "City": "Białystok",
+      "Street": "Młynowa",
+      "Number": "6"
+    },
+    "Thumbnail": {
+      "Description": "Widok z góry",
+      "Source": "https://i.imgur.com/PcJDzuc.jpg"
+    },
+    "OpeningHoursList": [
+      {
+        "DayOfTheWeek": 0,
+        "OpeningHour": "1970-01-01T15:00:00Z",
+        "ClosingHour": "1970-02-01T00:00:00Z"
+      },
+      {
+        "DayOfTheWeek": 4,
+        "OpeningHour": "1970-01-01T13:00:00Z",
+        "ClosingHour": "1970-02-01T02:00:00Z"
+      },
+      {
+        "DayOfTheWeek": 6,
+        "OpeningHour": "1970-01-01T13:00:00Z",
+        "ClosingHour": "1970-02-01T00:00:00Z"
+      }
+    ],
+    "Images": [
+      {
+        "Description": "Zdjęcie z drona",
+        "Source": "https://i.imgur.com/TA49ip8.jpg"
+      }
+    ],
+    "Urls": [
+      {
+        "UrlAdress": "https://goo.gl/maps/yg2edgq9SLUUzpQ7A",
         "Description": "Google Maps"
       }
     ]

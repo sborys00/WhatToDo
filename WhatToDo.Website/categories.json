@@ -2,38 +2,44 @@
   {
     "Name": "Jedzenie",
     "Places": [
-      "500 Stopni - Pizza Napoletana"
+      "500 Stopni - Pizza Napoletana",
+      "StrEAT FOOD Młynowa"
     ]
   },
   {
     "Name": "Ciekawe Miejsca",
     "Places": [
       "Pałac Branickich",
-      "Akcent ZOO"
+      "Akcent ZOO",
+      "Opera i Filharmonia Podlaska",
+      "Stadion Miejski",
+      "Biblioteka Politechniki Białostockiej"
     ]
   },
   {
     "Name": "Zakupy",
     "Places": [
-
+      "Galeria Alfa",
+      "Atrium Biała"
     ]
   },
   {
     "Name": "Sport i Rekreacja",
     "Places": [
-
+      "Stadion Miejski"
     ]
   },
   {
     "Name": "Kultura",
     "Places": [
-
+      "Opera i Filharmonia Podlaska",
+      "Biblioteka Politechniki Białostockiej"
     ]
   },
   {
     "Name": "Rozrywka",
     "Places": [
-
+      "StrEAT FOOD Młynowa"
     ]
   }
 ]
