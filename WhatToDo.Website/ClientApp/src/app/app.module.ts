@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PlaceCardComponent } from './place-card/place-card.component';
 import { ContentComponent } from './content/content.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     PlaceCardComponent,
-    ContentComponent
+    ContentComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
