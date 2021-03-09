@@ -8,6 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PlaceCardComponent } from './place-card/place-card.component';
 import { ContentComponent } from './content/content.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { CategoryComponent } from './category/category.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { CategoriesComponent } from './categories/categories.component';
     NavbarComponent,
     PlaceCardComponent,
     ContentComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

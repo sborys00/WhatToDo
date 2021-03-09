@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Category } from '../shared/models/category.model';
+import { PlacesService } from '../shared/services/places.service';
 
 @Component({
   selector: 'app-categories',
@@ -7,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor() { }
+  private _ps: PlacesService;
+
+  categories: Category[] = [];
+
+  constructor(ps: PlacesService) {
+    this._ps = ps;
+    this._ps.getCategories().subscribe(categories => {
+      this.categories = categories;
+    });
+  }
 
   ngOnInit(): void {
   }

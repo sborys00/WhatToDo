@@ -47,6 +47,10 @@ namespace WhatToDo.DataAccess.Models
 
                                     p.PlaceCategories.Add(new PlaceCategory { Place = p, Category = category });
                                 }
+                                if(cat.Places.Count() == 0)
+                                {
+                                    db.Categories.Add(category);
+                                }
                             }
                             db.AddRange(places);
                             db.SaveChanges();
