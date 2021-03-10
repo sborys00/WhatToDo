@@ -1,6 +1,7 @@
 <div class="d-flex flex-wrap">
   <div align="center" *ngFor="let category of categories" class="category-container p-4">
-    <app-category [category] = "category">
+    <app-category [category]="category" (categoryStatusEvent)="toggleCategory($event)">
     </app-category>
   </div>
+  <button routerLink="/places" routerLinkActive="active">Potwierdź</button>
 </div>

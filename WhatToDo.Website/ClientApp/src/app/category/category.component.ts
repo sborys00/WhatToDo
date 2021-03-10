@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Category } from '../shared/models/category.model';
 import { icons } from '../shared/category-icons';
 
@@ -9,9 +9,12 @@ import { icons } from '../shared/category-icons';
 })
 export class CategoryComponent implements OnInit {
 
+  @Input() category: Category = { categoryId: -1, name: "Kategoria" };
+  @Input() enabled: boolean = true;
 
-  @Input()
-  category: Category = { categoryId: -1, name: "Kategoria" };
+  @Output() categoryStatusEvent = new EventEmitter<string>();
+
+
   faIcon = icons[""];
 
   constructor() { }
@@ -20,4 +23,14 @@ export class CategoryComponent implements OnInit {
     this.faIcon = icons[this.category.name];
   }
 
+  toggleCategory() {
+    if (this.enabled) {
+      this.enabled = false;
+      this.categoryStatusEvent.emit(this.category.name);
+    }
+    else {
+      this.enabled = true;
+      this.categoryStatusEvent.emit(this.category.name);
+    }
+  }
 }
