@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Category } from '../shared/models/category.model';
 import { PlacesService } from '../shared/services/places.service';
 
@@ -10,12 +11,13 @@ import { PlacesService } from '../shared/services/places.service';
 export class CategoriesComponent implements OnInit {
 
   private _ps: PlacesService;
-
+  private _router: Router;
   categories: Category[] = [];
   enabledCategories: string[] = [];
 
-  constructor(ps: PlacesService) {
+  constructor(ps: PlacesService, router: Router) {
     this._ps = ps;
+    this._router = router;
     this._ps.getCategories().subscribe(categories => {
       this.categories = categories;
       for (var category of this.categories) {
@@ -38,4 +40,7 @@ export class CategoriesComponent implements OnInit {
     console.log(this.enabledCategories);
   }
 
+  submit(): void {
+    this._router.navigateByUrl('/places', { state: { categories: this.enabledCategories } });
+  }
 }

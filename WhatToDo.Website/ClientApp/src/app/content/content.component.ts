@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Place } from '../shared/models/place.model';
 import { PlacesService } from '../shared/services/places.service';
 
@@ -16,7 +17,8 @@ export class ContentComponent implements OnInit {
   i: number = 0;
   constructor(ps: PlacesService) {
     this._ps = ps;
-    ps.getPlaces().subscribe(places => {      
+
+    ps.getPlaces(history.state.categories).subscribe(places => {      
       this.places = places;
       this.place = this.places[0];
     });
@@ -30,7 +32,7 @@ export class ContentComponent implements OnInit {
       this.i++;
       this.place = this.places[this.i];
       if (this.i == this.places.length - 1) {
-        this._ps.getPlaces().subscribe(places => {
+        this._ps.getPlaces(history.state.categories).subscribe(places => {
           for (var place of places) {
             this.places.push(place);
           }

@@ -13,10 +13,13 @@ export class PlacesService {
   categoriesEndpoint: string = "categories";
   limit: number = 5;
   random: boolean = true;
+  categoriesString: string = "";
 
   constructor(private http: HttpClient) { }
-  getPlaces(limit: number = this.limit, random: boolean = this.random): Observable<Place[]> {
-    return this.http.get<Place[]>(`${this.apiUrl}/${this.placesEndpoint}?limit=${this.limit}&random=${this.random}`);
+  getPlaces(categories: string[] = [], limit: number = this.limit, random: boolean = this.random): Observable<Place[]> {
+    console.log(categories);
+    this.categoriesString = categories.join('&categories=');
+    return this.http.get<Place[]>(`${this.apiUrl}/${this.placesEndpoint}?limit=${this.limit}&random=${this.random}&categories=${this.categoriesString}`);
   }
 
   getCategories() {

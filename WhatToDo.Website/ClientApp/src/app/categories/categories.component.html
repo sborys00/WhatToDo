@@ -3,5 +3,5 @@
     <app-category [category]="category" (categoryStatusEvent)="toggleCategory($event)">
     </app-category>
   </div>
-  <button routerLink="/places" routerLinkActive="active">Potwierdź</button>
+  <button (click)="submit()">Potwierdź</button>
 </div>
