@@ -15,12 +15,14 @@ export class CategoryComponent implements OnInit {
   @Output() categoryStatusEvent = new EventEmitter<string>();
 
 
-  faIcon = icons[""];
+  faIcon = icons[""].icon;
+  bgColor = icons[""].bgColor;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.faIcon = icons[this.category.name];
+    this.faIcon = icons[this.category.name].icon;
+    this.bgColor = icons[this.category.name].bgColor;
   }
 
   toggleCategory() {

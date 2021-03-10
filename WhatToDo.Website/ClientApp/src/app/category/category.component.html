@@ -1,5 +1,5 @@
-<div class="category-badge bg-dark" [ngClass]="{'cat-enabled': enabled, 'cat-disabled': !enabled}" (click)="toggleCategory()">
-  <div class="d-inline align-middle">
+<div class="category-badge" [style.background-color]="bgColor" [ngClass]="{'cat-enabled': enabled, 'cat-disabled': !enabled}" (click)="toggleCategory()">
+  <div class="d-inline align-middle" >
     <fa-icon class="text-light" [icon]="faIcon" size="3x"></fa-icon>
   </div>
 </div>
