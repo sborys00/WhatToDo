@@ -6,11 +6,11 @@ interface Category_CategoryIcon {
 }
 
 export let icons: Category_CategoryIcon = {
-  "Jedzenie": { name: "Jedzenie", bgColor: "#ffff00", icon: faUtensils},
-  "Ciekawe Miejsca": { name: "Ciekawe Miejsca", bgColor: "#ff8000", icon: faLandmark },
-  "Zakupy": { name: "Zakupy", bgColor: "#ff0000", icon: faShoppingCart },
-  "Sport i Rekreacja": { name: "Sport i Rekreacja", bgColor: "#00ff00", icon: faRunning },
-  "Kultura": { name: "Kultura", bgColor: "#00ffff", icon: faFilm },
-  "Rozrywka": { name: "Rozrywka", bgColor: "#ff00d9", icon: faMusic },
+  "Jedzenie": { name: "Jedzenie", bgColor: "#E4FF3C", icon: faUtensils},
+  "Ciekawe Miejsca": { name: "Ciekawe Miejsca", bgColor: "#FF823C", icon: faLandmark },
+  "Zakupy": { name: "Zakupy", bgColor: "#3CFFF3", icon: faShoppingCart },
+  "Sport i Rekreacja": { name: "Sport i Rekreacja", bgColor: "#6EFF3C", icon: faRunning },
+  "Kultura": { name: "Kultura", bgColor: "#FF3C3C", icon: faFilm },
+  "Rozrywka": { name: "Rozrywka", bgColor: "#863CFF", icon: faMusic },
   "": { name: "", bgColor: "#", icon: faSpinner }
 };
