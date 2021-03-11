@@ -37,7 +37,6 @@ export class CategoriesComponent implements OnInit {
       this.enabledCategories.splice(this.enabledCategories.indexOf(category), 1);
     }
 
-    console.log(this.enabledCategories);
   }
 
   submit(): void {
