@@ -17,9 +17,12 @@ export class PlacesService {
 
   constructor(private http: HttpClient) { }
   getPlaces(categories: string[] = [], limit: number = this.limit, random: boolean = this.random): Observable<Place[]> {
-    console.log(categories);
     this.categoriesString = categories.join('&categories=');
-    return this.http.get<Place[]>(`${this.apiUrl}/${this.placesEndpoint}?limit=${this.limit}&random=${this.random}&categories=${this.categoriesString}`);
+    var url = `${this.apiUrl}/${this.placesEndpoint}?limit=${this.limit}&random=${this.random}`;
+    if (categories.length > 0) {
+      url += `&categories=${this.categoriesString}`;
+    }
+    return this.http.get<Place[]>(url);
   }
 
   getCategories() {
