@@ -17,6 +17,8 @@
 
 #main-container {
   background-color: #FFD333;
+  z-index: 5;
+  position: relative;
 }
 
 #main-content {
