@@ -1,5 +1,6 @@
 import { Component, Injectable, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Place } from '../shared/models/place.model';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-place-card',
@@ -18,6 +19,9 @@ export class PlaceCardComponent implements OnInit {
   };
 
   @Output() navEvent = new EventEmitter<number>();
+
+  leftIcon = faChevronLeft;
+  rightIcon = faChevronRight;
 
   constructor() {
 
