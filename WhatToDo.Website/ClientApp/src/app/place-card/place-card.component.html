@@ -1,8 +1,8 @@
 <div class="card bg-dark text-white h-100 vignette">
   <img class="img-crop card-img" src="{{place.thumbnail?.source}}" />
-  <div class="card-img-overlay card-img-vignette">
-    <div class="row align-items-start">
-      <div class="col-md-auto">
+  <div class="card-img-overlay d-flex flex-column card-img-vignette h-100">
+    <div class="row align-items-center">
+      <div class="col align-self-center">
         <h1 class="card-title img-text-bg px-2">{{place.name}}</h1>
       </div>
     </div>
@@ -14,7 +14,16 @@
         <h5 align="right">Godziny</h5>
       </div>
     </div>
-    <div class="row">
+    <div class="row h-100">
+      <div class="col">
+        <button class="h-10 btn-nav-vertical" (click)="prevPlace()">prev</button>
+      </div>
+      <div class="col"></div>
+      <div class="col">
+        <button class="h-100 btn-nav-vertical"(click)="nextPlace()">next</button>
+      </div>
+    </div>
+    <div class="row mt-auto">
       <div class="col">
         <p class="card-text img-text-bg">{{place.description}}</p>
       </div>

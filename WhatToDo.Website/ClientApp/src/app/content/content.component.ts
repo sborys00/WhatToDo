@@ -46,4 +46,12 @@ export class ContentComponent implements OnInit {
       this.place = this.places[this.i];
     }
   }
+
+  navFunc(dir:number): void {
+    if (dir == 1) {
+      this.nextPlace();
+    } else if (dir == -1) {
+      this.prevPlace();
+    }
+  }
 }
