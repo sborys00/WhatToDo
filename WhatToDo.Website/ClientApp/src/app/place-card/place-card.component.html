@@ -1,6 +1,15 @@
-<div class="card bg-dark text-white h-100 vignette">
+<div class="card bg-dark text-white h-100">
   <img class="img-crop card-img" src="{{place.thumbnail?.source}}" />
   <div class="card-img-overlay d-flex flex-column card-img-vignette h-100">
+    <div class="row side-nav">
+      <div class="col p-0 side-nav-left">
+        <button class="h-100 w-100 p-0 btn-nav-vertical" (click)="prevPlace()"><fa-icon [icon]="leftIcon" class="ml-3 fa-5x side-nav-left-icon"></fa-icon></button>
+      </div>
+      <div class="col-6"></div>
+      <div class="col p-0 side-nav-right align-items">
+        <button class="h-100 w-100 p-0 btn-nav-vertical" (click)="nextPlace()"><fa-icon [icon]="rightIcon" class="mr-3 fa-5x side-nav-right-icon"></fa-icon></button>
+      </div>
+    </div>
     <div class="row align-items-center">
       <div class="col align-self-center">
         <h1 class="card-title img-text-bg px-2">{{place.name}}</h1>
@@ -8,21 +17,13 @@
     </div>
     <div class="row">
       <div class="col">
-        <h5 align="left">{{place.address.street}} {{place.address.number}}</h5>
+        <h5 align="center" class="img-text-bg">{{place.address.street}} {{place.address.number}}</h5>
       </div>
       <div class="col">
-        <h5 align="right">Godziny</h5>
+        <h5 align="center" class="img-text-bg">Godziny</h5>
       </div>
     </div>
-    <div class="row h-100">
-      <div class="col">
-        <button class="h-100 btn-nav-vertical text-light" (click)="prevPlace()"><fa-icon [icon]="leftIcon"></fa-icon></button>
-      </div>
-      <div class="col"></div>
-      <div class="col">
-        <button class="h-100 btn-nav-vertical text-light"(click)="nextPlace()"><fa-icon [icon]="rightIcon"></fa-icon></button>
-      </div>
-    </div>
+    <div class="row h-100"></div>
     <div class="row mt-auto">
       <div class="col">
         <p class="card-text img-text-bg">{{place.description}}</p>
