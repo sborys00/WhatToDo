@@ -1,6 +1,8 @@
-<div class="category-badge row align-items-center" [style.background-color]="bgColor" [ngClass]="{'cat-enabled': enabled, 'cat-disabled': !enabled}" (click)="toggleCategory()">
-  <div class="flex-column">
-    <fa-icon class="cat-icon" [icon]="faIcon" size="3x"></fa-icon>
+<div class="category-box p-2 pt-2">
+  <div class="category-badge row align-items-center" [style.background-color]="bgColor" [ngClass]="{'cat-enabled': enabled, 'cat-disabled': !enabled}" (click)="toggleCategory()">
+    <div class="flex-column">
+      <fa-icon class="cat-icon" [icon]="faIcon" size="3x"></fa-icon>
+    </div>
   </div>
+  <h6 class="mt-2 mb-0 category-title">{{category.name}}</h6>
 </div>
-<small>{{category.name}}</small>  
