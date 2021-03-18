@@ -10,6 +10,7 @@ import { ContentComponent } from './content/content.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { CategoryComponent } from './category/category.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PlaceCardComponent,
     ContentComponent,
     CategoriesComponent,
-    CategoryComponent
+    CategoryComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
