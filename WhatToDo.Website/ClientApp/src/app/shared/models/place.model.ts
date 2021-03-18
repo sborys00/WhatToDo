@@ -1,6 +1,7 @@
 import { Address } from "./address.model";
 import { Category } from "./category.model";
 import { Image } from "./image.model";
+import { OpeningHours } from './opening-hours.model';
 import { Url } from "./url.model";
 
 export class Place {
@@ -12,6 +13,7 @@ export class Place {
   images?: Image[];
   urls?: Url[];
   categories?: Category[];
+  openingHours?: OpeningHours[];
 
   constructor(id: number, name: string, description: string, thumbnail: Image, address: Address) {
     this.placeId = id;
