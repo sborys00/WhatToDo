@@ -8,7 +8,14 @@
   height: 100px;
   width: 100px;
   border-radius: 50%;
+  opacity: 0.9;
   box-shadow: 2px 3px 3px 3px rgba(0, 0, 0, .2);
+}
+
+.category-badge:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .category-box {
