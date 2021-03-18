@@ -52,12 +52,84 @@ namespace WhatToDo.DataAccess.Models
                                     db.Categories.Add(category);
                                 }
                             }
+
+                            foreach(var place in places)
+                            {
+                                place.OpeningHoursList = FillMissingHours(place.OpeningHoursList);
+                            }
                             db.AddRange(places);
                             db.SaveChanges();
                         }
                     }
                 }
             }
+        }
+
+        public List<OpeningHours> FillMissingHours(List<OpeningHours> hours)
+        {
+            List<OpeningHours> newHours = new List<OpeningHours>();
+
+            //If it's empty, fill all week as open 24/7
+            if (hours.Count == 0)
+            {
+                for(int i = 0; i < 7; i++)
+                {
+                    OpeningHours nh = new OpeningHours();
+                    nh.DayOfTheWeek = i;
+                    nh.OpeningHour = DateTime.UnixEpoch;
+                    nh.ClosingHour = DateTime.UnixEpoch.AddDays(1);
+                    newHours.Add(nh);
+                }
+                return newHours;
+            }
+
+            int lastDay = hours[0].DayOfTheWeek;
+            newHours.Add(hours[0]);
+
+            //If there is only first day included, fill rest of the week with same hours
+            if(hours.Count == 1)
+            {
+                for (int j = 1; j < 7; j++)
+                {
+                    OpeningHours nh = new OpeningHours();
+                    nh.DayOfTheWeek = hours[0].DayOfTheWeek + j;
+                    nh.OpeningHour = hours[0].OpeningHour;
+                    nh.ClosingHour = hours[0].ClosingHour;
+                    newHours.Add(nh);
+                }
+                return newHours;
+            }
+
+            //Fill skipped days
+            for(int i = 1; i < hours.Count; i++)
+            {
+                if (hours[i].DayOfTheWeek != lastDay + 1)
+                {
+                    int skippedDays = hours[i].DayOfTheWeek - lastDay - 1;
+                    for (int j = 0; j < skippedDays; j++)
+                    {
+                        OpeningHours nh = new OpeningHours();
+                        nh.DayOfTheWeek = hours[i - 1].DayOfTheWeek + j + 1;
+                        nh.OpeningHour = hours[i - 1].OpeningHour;
+                        nh.ClosingHour = hours[i - 1].ClosingHour;
+                        newHours.Add(nh);
+                        lastDay++;
+                    }
+                }
+                newHours.Add(hours[i]);
+                lastDay++;
+            }
+            while (newHours.Count < 7)
+            {
+                OpeningHours nh = new OpeningHours();
+                nh.DayOfTheWeek = newHours[^1].DayOfTheWeek + 1;
+                nh.OpeningHour = newHours[^1].OpeningHour;
+                nh.ClosingHour = newHours[^1].ClosingHour;
+
+                newHours.Add(nh);
+            }
+
+            return newHours;
         }
 
         private class CategoryPlaces

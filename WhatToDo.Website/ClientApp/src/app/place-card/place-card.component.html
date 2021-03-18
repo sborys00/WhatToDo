@@ -20,7 +20,11 @@
         <h5 align="center" class="img-text-bg">{{place.address.street}} {{place.address.number}}</h5>
       </div>
       <div class="col">
-        <h5 align="center" class="img-text-bg">Godziny</h5>
+        <h5 align="center" class="img-text-bg">
+          <div *ngIf="!alwaysOpen; then thenBlock else elseBlock"></div>
+          <ng-template #thenBlock>{{openingHour | date:"HH:mm"}} - {{closingHour | date:"HH:mm"}}</ng-template>
+          <ng-template #elseBlock>Dostępne</ng-template>
+        </h5>
       </div>
     </div>
     <div class="row h-100"></div>

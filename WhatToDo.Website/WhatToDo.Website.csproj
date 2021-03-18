@@ -38,6 +38,7 @@
     <None Remove="ClientApp\src\app\shared\models\place.model.ts" />
     <None Remove="ClientApp\src\app\shared\models\url.model.ts" />
     <None Remove="ClientApp\src\app\shared\services\places.service.ts" />
+    <None Remove="ClientApp\src\app\shared\utils\OpeningHoursPicker.ts" />
   </ItemGroup>
 
   <ItemGroup>

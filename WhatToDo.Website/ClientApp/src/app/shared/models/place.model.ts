@@ -13,7 +13,7 @@ export class Place {
   images?: Image[];
   urls?: Url[];
   categories?: Category[];
-  openingHours?: OpeningHours[];
+  openingHoursList: OpeningHours[] = [];
 
   constructor(id: number, name: string, description: string, thumbnail: Image, address: Address) {
     this.placeId = id;

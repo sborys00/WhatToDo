@@ -1,11 +1,11 @@
 export class OpeningHours {
-  closingHour: Date;
+  closingHour: string;
   dayOfTheWeek: number = -1;
-  openingHour: Date;
+  openingHour: string;
   openingHoursId: number = -1;
 
   constructor() {
-    this.openingHour = new Date("1970-01-01T00:00:00");
-    this.closingHour = new Date("1970-01-01T00:00:00");
+    this.openingHour = "1970-01-01T00:00:00";
+    this.closingHour = "1970-01-01T00:00:00";
   }
 }
