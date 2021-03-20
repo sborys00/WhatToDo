@@ -28,7 +28,8 @@ export class PlaceCardComponent implements OnInit {
 
   openingHour: number = -1;
   closingHour: number = -1;
-  alwaysOpen: boolean = false;
+  currentAvailability: Availability = Availability.Other;
+  availability = Availability;
 
   constructor() {
   }
@@ -46,13 +47,15 @@ export class PlaceCardComponent implements OnInit {
     console.log(this.closingHour);
     console.log(this.closingHour - this.openingHour);
     if (this.closingHour - this.openingHour == 86400000) {
-      this.alwaysOpen = true;
+      this.currentAvailability = Availability.AlwaysAvailable;
+    }
+    else if (this.closingHour - this.openingHour == 0) {
+      this.currentAvailability = Availability.ClosedToday;
     }
     else {
-      this.alwaysOpen = false;
+      this.currentAvailability = Availability.Other;
     }
     console.log(this.closingHour - 86400000);
-    console.log(this.alwaysOpen);
   }
 
   nextPlace(): void {
@@ -61,4 +64,10 @@ export class PlaceCardComponent implements OnInit {
   prevPlace(): void {
     this.navEvent.next(-1);
   }
+}
+
+export enum Availability {
+  AlwaysAvailable,
+  ClosedToday,
+  Other
 }

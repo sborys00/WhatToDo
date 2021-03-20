@@ -21,9 +21,11 @@
       </div>
       <div class="col">
         <h5 align="center" class="img-text-bg">
-          <div *ngIf="!alwaysOpen; then thenBlock else elseBlock"></div>
-          <ng-template #thenBlock>{{openingHour | date:"HH:mm"}} - {{closingHour | date:"HH:mm"}}</ng-template>
-          <ng-template #elseBlock>Dostępne</ng-template>
+          <div [ngSwitch]="currentAvailability">
+            <div *ngSwitchCase="availability.AlwaysAvailable">Dostępne</div>
+            <div *ngSwitchCase="availability.ClosedToday">Zamknięte</div>
+            <div *ngSwitchCase="availability.Other">{{openingHour | date:"HH:mm"}} - {{closingHour | date:"HH:mm"}}</div>
+          </div>
         </h5>
       </div>
     </div>
