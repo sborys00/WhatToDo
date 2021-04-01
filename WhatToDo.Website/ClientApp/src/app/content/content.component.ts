@@ -15,10 +15,18 @@ export class ContentComponent implements OnInit {
   places: Place[] = [];
   place: Place = this.places[0];
   i: number = 0;
+  enabledCategories: string[]; 
   constructor(ps: PlacesService) {
     this._ps = ps;
+    var categories = localStorage.getItem("categories");
+    if (categories == null) {
+      this.enabledCategories = [];
+    }
+    else {
+      this.enabledCategories = categories.split(",");
+    }
 
-    ps.getPlaces(history.state.categories).subscribe(places => {      
+    ps.getPlaces(this.enabledCategories).subscribe(places => {      
       this.places = places;
       this.place = this.places[0];
     });

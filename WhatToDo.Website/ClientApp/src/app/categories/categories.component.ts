@@ -20,8 +20,15 @@ export class CategoriesComponent implements OnInit {
     this._router = router;
     this._ps.getCategories().subscribe(categories => {
       this.categories = categories;
-      for (var category of this.categories) {
-        this.enabledCategories.push(category.name);
+
+      var storageCategories = localStorage.getItem("categories");
+      if (storageCategories != null) {
+        this.enabledCategories = storageCategories.split(',');
+      }
+      else {
+        for (var category of this.categories) {
+          this.enabledCategories.push(category.name);
+        }
       }
     });
   }
@@ -40,6 +47,7 @@ export class CategoriesComponent implements OnInit {
   }
 
   submit(): void {
-    this._router.navigateByUrl('/places', { state: { categories: this.enabledCategories } });
+    localStorage.setItem("categories", this.enabledCategories.join(','));
+    this._router.navigateByUrl('/places');
   }
 }

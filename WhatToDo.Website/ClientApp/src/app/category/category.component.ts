@@ -23,6 +23,7 @@ export class CategoryComponent implements OnInit {
   ngOnInit(): void {
     this.faIcon = icons[this.category.name].icon;
     this.bgColor = icons[this.category.name].bgColor;
+    this.enabled = localStorage.getItem("categories")?.split(',').includes(this.category.name) ?? this.enabled;
   }
 
   toggleCategory() {
