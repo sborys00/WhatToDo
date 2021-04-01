@@ -40,12 +40,8 @@ export class PlaceCardComponent implements OnInit {
 
   ngOnChanges(): void {
     let oh = OpeningHoursPicker.pickHours(this.place.openingHoursList);
-    console.log(this.place);
     this.openingHour = Date.parse(oh.openingHour);
     this.closingHour = Date.parse(oh.closingHour);
-    console.log(this.openingHour);
-    console.log(this.closingHour);
-    console.log(this.closingHour - this.openingHour);
     if (this.closingHour - this.openingHour == 86400000) {
       this.currentAvailability = Availability.AlwaysAvailable;
     }
@@ -55,7 +51,6 @@ export class PlaceCardComponent implements OnInit {
     else {
       this.currentAvailability = Availability.Other;
     }
-    console.log(this.closingHour - 86400000);
   }
 
   nextPlace(): void {
