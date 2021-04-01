@@ -33,6 +33,7 @@ export class ContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    document.getElementById("main-content")?.scrollIntoView(false);
   }
 
   nextPlace(): void {
